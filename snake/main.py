@@ -111,9 +111,9 @@ class Snake:
         result = False
         head_x, head_y = self.__body[0]
         columns, rows = self.__screen.get_size()
-        if head_x < 0 or head_x > columns:
+        if head_x <= 0 or head_x >= columns:
             return True
-        if head_y < 0 or head_y > rows:
+        if head_y <= 0 or head_y >= rows:
             return True
         for i in range(1, len(self.__body)):
             if self.__body[0] == self.__body[i]:
